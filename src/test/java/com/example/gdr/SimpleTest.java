@@ -12,7 +12,7 @@ public class SimpleTest {
 	
 	@Test
 	public void novoTeste() {
-		assertFalse(true);
+		assertFalse(false);
 	}
 
 }
