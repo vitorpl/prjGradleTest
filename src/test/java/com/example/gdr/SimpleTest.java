@@ -1,13 +1,18 @@
 package com.example.gdr;
 
-import org.junit.jupiter.api.Assertions;
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 public class SimpleTest {
 	
 	@Test
 	public void testSimples() {
-		Assertions.assertTrue(true);
+		assertTrue(true);
+	}
+	
+	@Test
+	public void novoTeste() {
+		assertFalse(false);
 	}
 
 }
