@@ -1,0 +1,47 @@
+plugins {
+	id 'org.springframework.boot' version '2.4.5'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '15'
+
+repositories {
+	mavenCentral()
+}
+/* //gera em: V:\java\projetos\prjGradle-1\build\libs
+esse trem aqui da um monte de erro maldito
+usar a task assemble
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.example.gdr.PrjGradle1Application'
+    }
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } } with jar
+}*/
+
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'com.h2database:h2'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+	useJUnitPlatform()
+}
+
+
+
+/*
+jar {
+    manifest {
+        attributes "Main-Class": "PrjGradle1Application"
+    }    
+    baseName = 'prjGradleTest'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}*/
